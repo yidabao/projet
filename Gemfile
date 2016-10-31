@@ -27,12 +27,17 @@ group :development, :test do
   gem 'spring'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
 # geocoding 
 gem 'nominatim', '~> 0.0.5'
 
 gem 'pg', '~> 0.18.4', group: :production
+
+gem 'forecast_io', '~> 2.0'
+
+gem 'typhoeus', '~> 1.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -15,5 +15,20 @@
   <%= @city.lon %>
 </p>
 
+<p>
+  <strong>Temperature:</strong>
+  <%= @forecasts[:temperature] %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @forecasts[:summary] %>
+</p>
+
+<p>
+  <strong>Windspeed:</strong>
+  <%= @forecasts[:windSpeed] %>
+</p>
+
 <%= link_to 'Edit', edit_city_path(@city) %> |
 <%= link_to 'Back', cities_path %>
