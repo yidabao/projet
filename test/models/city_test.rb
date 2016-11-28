@@ -15,4 +15,19 @@ class CityTest < ActiveSupport::TestCase
    end
  end
 end
+  
+   test 'valid city' do
+     VCR.use_cassette("nominatim1") do
+       incorrect = City.new name:cities(:one).name
+       assert weather == 'rain'
+     end
+  end
+
+  test 'weather forecast' do 
+     VCR.use_cassette("weather") do
+       weather = cities(:one).weather
+      
+       assert weather == 'rain'
+     end
+  end
 end
