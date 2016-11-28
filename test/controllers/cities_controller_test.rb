@@ -25,12 +25,7 @@ class CitiesControllerTest < ActionController::TestCase
     assert_redirected_to city_path(assigns(:city))
   end
 
-  test "should show city" do
-     VCR.use_cassette("nominatim") do
-    get :show, id: @city
-    assert_response :success
-     end
-  end
+  
 
   test "should get edit" do
      VCR.use_cassette("nominatim") do
